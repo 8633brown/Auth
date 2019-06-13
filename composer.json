@@ -1,5 +1,5 @@
 {
-    "name": "8633brown/Auth",
+    "name": "brown/Auth",
     "type": "library",
     "description": "",
     "keywords": [
@@ -25,12 +25,12 @@
     },
     "autoload": {
         "psr-4": {
-            "8633brown\\Auth\\": "src"
+            "brown\\Auth\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "8633brown\\Auth\\": "tests"
+            "brown\\Auth\\": "tests"
         }
     },
     "scripts": {

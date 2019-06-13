@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace 8633brown\Auth;
+namespace brown\Auth;
 
 class ExampleTest extends \PHPUnit\Framework\TestCase
 {
