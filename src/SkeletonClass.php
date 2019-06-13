@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace League\Skeleton;
+namespace 8633brown\Auth;
 
 class SkeletonClass
 {
