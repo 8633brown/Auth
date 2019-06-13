@@ -23,8 +23,7 @@ before_script:
 
 script:
   - vendor/bin/phpcs --standard=psr2 src/
-  - ./vendor/bin/phpunit --coverage-clover build/logs/clover.xml
+  - vendor/bin/phpunit --coverage-clover build/logs/clover.xml
 
 after_script:
-  - ./vendor/bin/php-coveralls --coverage_clover build/logs/clover.xml
-  - ./vendor/bin/phpcs src tests
+  - vendor/bin/php-coveralls --coverage_clover build/logs/clover.xml
