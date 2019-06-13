@@ -27,4 +27,4 @@ script:
 
 after_script:
   - ./vendor/bin/php-coveralls --coverage_clover build/logs/clover.xml
-  - ./vendor/bin/phpcs
+  - ./vendor/bin/phpcs src tests
