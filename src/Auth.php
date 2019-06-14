@@ -38,8 +38,8 @@ class Auth extends User
     public function registerUser(
         string $email,
         string $password,
-        ?string $repeatpassword,
-        ?string $username
+        string $repeatpassword = null,
+        string $username = null
     ):bool {
         $this->validator->validateEmail($email);
         $this->validator->validatePassword($password);
