@@ -1,4 +1,5 @@
 CREATE DATABASE `php_auth_test`;
+USE `php_auth_test`;
 CREATE TABLE IF NOT EXISTS `users` (
 `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
 `email` varchar(249) COLLATE utf8mb4_unicode_ci NOT NULL,
