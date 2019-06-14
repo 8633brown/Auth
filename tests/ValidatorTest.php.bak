@@ -1,0 +1,39 @@
+<?php
+
+declare(strict_types=1);
+
+namespace brown\Auth;
+
+use \PHPUnit\Framework\TestCase;
+
+class ValidatorTests extends TestCase
+{
+
+    public $auth;
+
+    protected function setUp()
+    {
+        $this->validator = new Validator();
+    }
+        
+    public function emailDataProvider()
+    {
+        return [
+            ['test@email.com', true],
+        ];
+    }
+    /**
+     *  Test register user method passes for different scenarios
+     *
+     *  @dataProvider emailDataProvider
+     */
+    public function  testValidateEmail($email, $expected)
+    {
+        $this->assertSame(
+            $expected, 
+            $this->validator->validateEmail($email)
+        );
+    }
+
+}
+
