@@ -22,7 +22,7 @@ matrix:
     env: 'COMPOSER_FLAGS="--prefer-stable --prefer-lowest"'
 
 before_script:
-  - mysql -e < ./buildDB.sql
+  - mysql < ./buildDB.sql
   - travis_retry composer update ${COMPOSER_FLAGS} --no-interaction --prefer-dist
 
 script:
