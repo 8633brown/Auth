@@ -1,29 +1,32 @@
 language: php
 
 php:
-  - 7.0
-  - 7.1
-  - 7.2
-  - 7.3
+    - 7.0
+    - 7.1
+    - 7.2
+    - 7.3
 
 sudo: false
 
 ## Cache composer
 cache:
-  directories:
-    - $HOME/.composer/cache
+    directories:
+        - $HOME/.composer/cache
+    services:
+        - mysql
 
-matrix:
-  include:
-    - php: 7.0
-      env: 'COMPOSER_FLAGS="--prefer-stable --prefer-lowest"'
+    matrix:
+        include:
+            - php: 7.0
+              env: 'COMPOSER_FLAGS="--prefer-stable --prefer-lowest"'
 
-before_script:
-  - travis_retry composer update ${COMPOSER_FLAGS} --no-interaction --prefer-dist
+    before_script:
+        - mysql < ./buildDB.sql
+        - travis_retry composer update ${COMPOSER_FLAGS} --no-interaction --prefer-dist
 
-script:
-  - vendor/bin/phpcs --standard=psr2 src/
-  - vendor/bin/phpunit --coverage-clover build/logs/clover.xml
+    script:
+        - vendor/bin/phpcs --standard=psr2 src/
+        - vendor/bin/phpunit --coverage-clover build/logs/clover.xml
 
-after_script:
-  - vendor/bin/php-coveralls --coverage_clover build/logs/clover.xml
+    after_script:
+        - vendor/bin/php-coveralls --coverage_clover build/logs/clover.xml
