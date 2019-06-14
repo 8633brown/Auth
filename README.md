@@ -4,7 +4,7 @@
 [![Software License][ico-license]](LICENSE.md)
 [![Travis (.com) branch](https://img.shields.io/travis/com/8633brown/Auth/dev.svg)](https://travis-ci.com/8633brown/Auth?branch=dev)
 [![Coveralls github branch](https://img.shields.io/coveralls/github/8633brown/Auth/dev.svg)](https://coveralls.io/github/8633brown/Auth?branch=dev)
-[![Quality Score][ico-code-quality]][link-code-quality]
+[![Scrutinizer code quality (GitHub/Bitbucket)](https://img.shields.io/scrutinizer/quality/g/8633brown/Auth/dev.svg)](https://scrutinizer-ci.com/g/8633brown/Auth/?branch=dev)
 [![Total Downloads][ico-downloads]][link-downloads]
 [![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%207.0-8892BF.svg?style=flat-circle)](https://php.net/)
 
