@@ -34,14 +34,12 @@ class User
         }
 
         return true;
-
     }
 
-    public function run($sql, $args = NULL)
+    public function run($sql, $args = null)
     {
         $this->normalise();
-        if (!$args)
-        {
+        if (!$args) {
             return $this->dbh->query($sql);
         }
         $stmt = $this->dbh->prepare($sql);
